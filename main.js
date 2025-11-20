@@ -135,7 +135,10 @@ class Renderer {
 	}
 
 	update() {
+		this.canvas.width = this.canvas.clientWidth;
+		this.canvas.height = this.canvas.clientHeight;
 		this.draw();
+
 		requestAnimationFrame(() => this.update());
 	}
 
